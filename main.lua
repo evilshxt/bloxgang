@@ -153,7 +153,8 @@ ToggleAutoLeveling.MouseButton1Click:Connect(function()
     if autoLevelingEnabled then spawn(autoLevel) end
 end)
 
--- Main Loop
 while wait() do
-    attackEnemies()
+    if killAuraEnabled then
+        attackEnemies()
+    end
 end
